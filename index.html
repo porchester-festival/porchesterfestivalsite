@@ -1,4 +1,61 @@
 <!DOCTYPE HTML>
-
-<head>Test site</head>
-<body><a>test</a></body>
+<head>
+	<title>Porchester Festival - Home</title>
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+	<script>
+		console.log("test");
+		var endTime = new Date("19 May, 2017 00:00:00").getTime();
+		var x = setInterval(function() {
+			var currentTime = new Date().getTime();
+			var difference = endTime - currentTime;
+					
+			var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+					
+			document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.";
+		}, 1000);
+	</script>
+	<div id="container-header">
+		<div id="logo"></div>
+		<div id="title">Porchester Festival</div>
+		<div id="link-bar"></div>
+	</div>
+	<div id="container-main">
+		<div id="navbar">
+			<a href="http://porchesterfesitval.com/#">
+				<div id="home-button" class="nav-button">Home</div></a>
+			<a href="http://porchesterfestival/history.html">
+				<div id="history-button" class="nav-button">History</div></a>
+			<a href="http://porchesterfestival.com/gallery">
+				<div id="gallery-button" class="nav-button">Gallery</div></a>
+			<a href="http://porchesterfestival.com/sponsors">
+				<div id="sponsors-button" class="nav-button">Sponsors</div></a>
+			<a href="http://porchesterfestival.com/Events">
+				<div id="events-button" class="nav-button">Events</div></a>
+		</div>
+		<div id="content-frame">
+			<div id="countdowntitle" class="countdown">Website launch in:<div id="countdown" class="countdown"></div></div>
+			<div id="photo1" class="captionedphoto">
+				<div id="mapphoto"></div>
+				<div id="mapcaption">The Porchester ward</div>
+			</div>
+			<div id="text-area1">
+				<div id="texttitle">The Porchester Festival<br/></div>
+				<div id="textbody">Porchester Festival is a weekend of fun for all residents of Porchester ward, an area which encompasses all of Porchester Gardens and stretches as far as Mapperley golf course.<br/>It is volunteer run and many events are free. It aims to celebrate the wonderful schools, organisations, businesses, churches and community groups that make this such a special part of Mapperley.<br/>We hope this festival will help foster a sense of community and becomes a popular summer event in the years to come.</div>
+			</div>
+			
+			<div id="minigallery">Gallery</div>
+			<div id="gallerycontainer">
+				<div id="galleryphoto1" class="galleryphoto"><img src="assets/Picture1.png"></div>
+				<div id="galleryphoto2" class="galleryphoto"><img src="assets/Picture2.png"></div>
+				<!-- Add onclick zoom -->
+			</div>
+			<div id="gallerytext"><br/>Visit the full gallery <a href="http://www.porchesterfestival.com/history.html">here</a></div>
+		</div>
+	</div>
+</body>
