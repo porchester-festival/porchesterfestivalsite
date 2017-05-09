@@ -7,12 +7,12 @@ body {
 }
 
 #container-header {
-	position: static;
+	position: relative;
 	height: 200px;
 	width: 100%;
 	background-image: url("assets/IMG_1473.JPG");
 	background-size: cover;
-	background-position: 0px 55%;
+	background-position: 0px 60%;
 	overflow: hidden;
 	
 }
@@ -64,7 +64,7 @@ body {
 }
 
 #home-button {
-	margin-left: 2%;
+	margin-left: 15px;
 	border-right: solid 2px;
 	border-color: grey;
 }
@@ -94,8 +94,10 @@ body {
 	bottom: 0;
 	left: 0;
 	right 0;
-	width: 100%;
-	height: 100%;
+	height: calc(100% - 200px);
+	/*background-color: #294cc4;
+	background-color: #d8548e;
+	background-color: #eb9f31;*/
 	background-color: #88ba41;
 	overflow: hidden;
 	justify-content: center;
@@ -105,128 +107,126 @@ body {
 	position: relative;
 	display: table;
 	width: 75%;
-	height: calc(1000px);
+	height: 1000px;
 	margin: 55px 50px 50px 50px;
 	border-width: 4px;
 	border-style: solid;
 	border-color: whitesmoke;
 	border-radius: 20px;
 	background-color: floralwhite;
+	overflow-y: scroll;
 	
 }
 
-#texttitle {
-	font-size: 35px;
-	text-decoration: underline;
-	line-height: 15px;
+texttitle {
+	font-size: 30px;
 }
 
-#textbody {
+textbody {
 	font-size: 20px;
-	line-height: 25px;
-	padding-top: 17px;
 }
 
 #text-area1 {
 	float: left;
-	width: 62%;
+	display: inline-block;
+	position: relative;
+	width: calc(100% - 285px);
 	word-wrap: break-word;
 	overflow: hidden;
 	padding: 5px;
 	margin-left: 30px;
+	padding-bottom: 200px;
 }
 
 #photo1 {
+	position: relative;
+	display: inline-block;
 	float: right;
 	padding: 1px;
-	width: 30%;
-	height: 32%;
+	width: 220px;
+	height: 35%;
+	overflow: hidden;
 }
 
-#mapphoto {
+#pmphoto {
+	position: relative;
 	height: 90%;
-	background-image: url("assets/A3%20Polling%20Station%20Review%20Porchester.png");
-	background-size: cover;
+	width: 220px;
+	background-image: url("assets/history_prime_minister.png");
+	align-content: center;
+	background-repeat: no-repeat;
 }
 
-#mapcaption {
-	padding-top: 2px;
+#pmcaption {
+	position: relative;
+	padding-top: 0px;
 	font-size: 90%;
 	font-style: italic;
+	width: 220px;
 }
+
+#photo2 {
+	position: relative;
+	display: inline-block;
+	float: right;
+	padding: 1px;
+	width: 220px;
+	height: 20%;
+	overflow: hidden;
+}
+
+#bphoto {
+	position: relative;
+	height: 90%;
+	width: 220px;
+	background-image: url("assets/HistoryPicture1.png");
+	align-content: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#bcaption {
+	position: relative;
+	padding-top: 0px;
+	font-size: 90%;
+	font-style: italic;
+	width: 220px;
+}
+
+#photo3 {
+	position: relative;
+	display: inline-block;
+	float: right;
+	padding: 1px;
+	width: 220px;
+	height: 20%;
+	overflow: hidden;
+}
+
+#wkphoto {
+	position: relative;
+	height: 90%;
+	width: 220px;
+	background-image: url("assets/HistoryPicture2.png");
+	align-content: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#wkcaption {
+	position: relative;
+	padding-top: 0px;
+	font-size: 90%;
+	font-style: italic;
+	width: 220px;
+}
+
 
 .captionedphoto {
 	position: relative;
-	display: inline-block;
 	background-color: beige;
 	border-width: 5px;
 	border-style: solid;
 	border-color: beige;
 	border-radius: 10px;
-}
-
-#minigallery {
-	padding-top: 20px;
-	width: 95%;
-	margin: 30px;
-	font-size: 35px;
-	text-decoration: underline;
-	float: left;
-	
-}
-
-#gallerycontainer {
-	display: flex;
-	justify-content: center;
-	margin: 0px 0px 0px 30px;
-	width: 95%;
-	
-}
-
-.galleryphoto {
-	display: inline-grid;
-	width: 45%;
-	padding: 10px;
-	overflow: hidden;
-	
-}
-
-#galleryphoto1 {
-	background-repeat: no-repeat;
-	background-size: contain;
-	float: left;
-}
-
-#galleryphoto2 {
-	background-repeat: no-repeat;
-	background-size: contain;
-	float:left;
-}
-
-img {
-	max-width: 100%;
-	flex: 1;
-}
-
-#gallerytext {
-	justify-content:center;
-	flex-direction: row;
-	float: left;
-	width: 95%;
-	padding-left: 35px;
-	font-size: 18px;
-	line-height: 10px;
-}
-
-.countdown {
-	padding-top: 50px;
-	float: left;
-	width: 67%;
-	padding-bottom: 40px;
-	max-width: 67%;
-	text-align: center;
-	font-family: "PT Sans", sans-serif;
-	font-size: 50px;
-	font-weight: 900;
-	margin: 0 auto;
 }
