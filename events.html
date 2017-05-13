@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Porchester Festival - Home</title>
+	<link rel="stylesheet" type="text/css" href="events.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+	<script>
+		var endTime = new Date("19 May, 2017 00:00:00").getTime();
+		var x = setInterval(function() {
+			var currentTime = new Date().getTime();
+			var difference = endTime - currentTime;
+					
+			var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+					
+			document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.";
+		}, 1000);
+	</script>
+	<div id="container-header">
+		<img id="logo" src="assets/porchesterfestival_logo_new.png">
+	</div>
+	<div id="container-main">
+		<div id="navbar">
+			<a href="http://www.porchesterfestival.org/">
+				<div id="home-button" class="nav-button">Home</div></a>
+			<a href="http://www.porchesterfestival.org/history.html">
+				<div id="history-button" class="nav-button">History</div></a>
+			<a href="http://www.porchesterfestival.org/gallery.html">
+				<div id="gallery-button" class="nav-button">Gallery</div></a>
+			<a href="http://www.porchesterfestival.org/sponsors.html">
+				<div id="sponsors-button" class="nav-button">Sponsors</div></a>
+			<a href="http://www.porchesterfestival.org/events.html">
+				<div id="events-button" class="nav-button">Events</div></a>
+		</div>
+		<div id="content-frame">
+			<div id="texttitle">Events:</div>
+			<div id="textbody">We have a full programme of events booked this year, you can find a non-exhaustive list below <br/>Take a look at our <a href="https://www.facebook.com/Porchester-Festival-June-30th-July-1st-and-2nd-2017-872333616167515/">Facebook page</a> for more, and pick up a flyer for event times.<br/>Remember all our events are free to enter for your enjoyment!</div>
+			<div id="textsubtitle">Saturday 3rd June</div>
+			<div id="textbody">
+				<ul>
+					<li>To raise funds for the Porchester Community Festival, a Pop Up Restaurant is opening for one night only, you can find the full details on <a href="https://www.porchesterfestival.org/assets/pop-up-poster.docx">this poster</a>.</li>
+				</ul>
+			</div>
+			<div id="textsubtitle">Friday 30th</div>
+			<div id="textbody">
+				<ul>
+					<li>Friday afternoon starts with Toddler’s story time at the Library.</li>
+					<li>There will be a free to enter music concert in St James Church Centre (with a bar) at 7.30pm. Doors will be open at 7pm.</li>
+				</ul>
+			</div>
+			<div id="textsubtitle">Saturday 1st July</div>
+			<div id="textbody">
+				<ul>
+					<li>Come to the Kids Zone on Saturday morning, with crafts and games at Westdale Lane Community Centre (and hopefully some classic cars and motor bikes for the mums and dads – details to follow).</li>
+					<li>Rose from Tesco will be doing her fun Farm to Fork games at the Library, starting at 10.30.</li>
+					<li>Saturday afternoon sees the launch of our new Sports Zone at Porchester Junior School, so far we have football and netball coaching, watch this space to see who else will be there. Mums and dads can have a go on our Fastest to 1k competition on the exercise bike – there will be a prize for the fastest, to be presented at our Community Celebration on Sunday afternoon.</li>
+					<li>There’ll be lots to do at the St James Church Campus – the Church Centre is hosting a gathering of community groups for your information and interest – with first aid demonstrations from our Community First Responders team (they might even let you have a look around their car) – wood turning demonstrations from Glad Turnings and face painting from Jayface . Lunches will be served in the centre and then, mid afternoon we’ll be opening the bar and welcoming Teddy Fullick and his band to entertain us with Jazz in The Marquee. The exercise bike will be there, too, for more Fastest to 1K competitors to have a go (ages 16+ only).</li>
+					<li>Maybe gardening’s your thing – pop along to Haywood Road Community Centre on Saturday afternoon where they are hosting a plant and seed swap, stay a while and enjoy the only green space in Porchester Gardens.</li>
+					<li>If you’re still looking for entertainment, we go back to Westdale Lane Community Centre for our Family Film Night, with free popcorn!</li>
+				</ul>
+			</div>
+			<div id="textsubtitle">Sunday 2nd July</div>
+			<div id="textbody">
+				<ul>
+					<li>Try a leisurely start to Sunday with Yoga, or maybe Tai Chi’s more to your taste – we’ve got that, too, plus dance with Studio 3, if that’s your thing. Or try a real wake-up with Clubbercise at 12.15pm, followed by Kettlercise – that all in our Fitness Zone at Haywood Road Community Centre.</li>
+					<li>Staying with the fitness theme, we’ll be taking you on a scenic walk, if you are more into leisurely strolls – time and venue still have to be arranged, so watch this space!</li>
+					<li>And then we all come together in the marquee at St James to celebrate our community and share what we enjoyed most during the Festival. There’ll be music, choirs, dance, jokes, laughter and prize giving – a fun way to round off a packed week-end.</li>
+				</ul>	
+			</div>
+		</div>
+	</div>
+</body>
