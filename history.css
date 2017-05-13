@@ -120,6 +120,8 @@ body {
 
 texttitle {
 	font-size: 30px;
+	line-height: 70px;
+	text-decoration: underline;
 }
 
 textbody {

@@ -108,19 +108,26 @@ body {
 	border-color: whitesmoke;
 	border-radius: 20px;
 	background-color: floralwhite;
+	padding-left: 25px;
 	
 }
 
 #texttitle {
 	font-size: 35px;
 	text-decoration: underline;
-	line-height: 15px;
+	font-weight: 900;
+	
+}
+
+#textsubtitle {
+	font-size: 30px;
+	text-decoration: underline;
 }
 
 #textbody {
 	font-size: 20px;
 	line-height: 25px;
-	padding-top: 17px;
+	padding-top: 10px;
 }
 
 #text-area1 {
