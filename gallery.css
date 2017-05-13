@@ -21,13 +21,9 @@ body {
 
 #logo {
 	display: inline-block;
-	float: left;
-	margin-top: 10px;
-	margin-left: 12.5px;
-	width: 175px;
-	height: 175px;
-	background-image: url(assets/porchesterfestivallogotransparent.png);
-	background-size: cover;
+	width: 321px;
+	height: 190px;
+	margin-left: calc(50% - 190px);
 }
 
 #title {
