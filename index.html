@@ -15,8 +15,13 @@
 			var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 			var seconds = Math.floor((difference % (1000 * 60)) / 1000);
-					
-			document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.";
+			
+			if(difference <= 0) {
+				clearInterval(x);
+				
+			} else {
+				document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.";
+			}
 		}, 1000);
 	</script>
 	<div id="container-header">
@@ -43,7 +48,9 @@
 			</div>
 			<div id="text-area1">
 				<div id="texttitle">The Porchester Festival<br/></div>
-				<div id="textbody">Porchester Festival is a weekend of fun for all residents of Porchester ward, an area which encompasses all of Porchester Gardens and stretches as far as Mapperley golf course.<br/>It is volunteer run and many events are free. It aims to celebrate the wonderful schools, organisations, businesses, churches and community groups that make this such a special part of Mapperley.<br/>We hope this festival will help foster a sense of community and becomes a popular summer event in the years to come.</div>
+				<div id="textbody">Porchester Festival is a weekend of fun for all residents of Porchester ward, an area which encompasses all of Porchester Gardens and stretches as far as Mapperley golf course.<br/>It is volunteer run and many events are free. It aims to celebrate the wonderful schools, organisations, businesses, churches and community groups that make this such a special part of Mapperley.<br/>We hope this festival will help foster a sense of community and becomes a popular summer event in the years to come.<br/>
+				Porchester Community Festival is a non profit organisation and any excess funds from organising the Festival are put back into the community. This year we're putting any excess funds raised into Haywood Road Community Centre.
+				</div>
 			</div>
 			
 			<div id="minigallery">Gallery</div>
