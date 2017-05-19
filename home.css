@@ -154,6 +154,7 @@ body {
 .captionedphoto {
 	position: relative;
 	display: inline-block;
+	float: right;
 	background-color: beige;
 	border-width: 5px;
 	border-style: solid;
@@ -214,12 +215,21 @@ img {
 	line-height: 10px;
 }
 
-.countdown {
+#countdowntitle {
+	position: relative;
 	padding-top: 50px;
 	float: left;
 	width: 67%;
+	text-align: center;
+	font-family: "PT Sans", sans-serif;
+	font-size: 30px;
+	font-weight: 900;
+	margin: 0 auto;
+}
+
+#countdown {
+	width: 100%;
 	padding-bottom: 40px;
-	max-width: 67%;
 	text-align: center;
 	font-family: "PT Sans", sans-serif;
 	font-size: 50px;
