@@ -5,25 +5,6 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 <body>
-	<script>
-		var endTime = new Date("27 May, 2017 13:00:00").getTime();
-		var x = setInterval(function() {
-			var currentTime = new Date().getTime();
-			var difference = endTime - currentTime;
-					
-			var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((difference % (1000 * 60)) / 1000);
-			
-			if(difference <= 0) {
-				clearInterval(x);
-				
-			} else {
-				document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.";
-			}
-		}, 1000);
-	</script>
 	<div id="container-header">
 		<img id="logo" src="assets/porchesterfestival_logo_new.png">
 	</div>
@@ -35,13 +16,12 @@
 				<div id="history-button" class="nav-button">History</div></a>
 			<a href="http://www.porchesterfestival.org/gallery.html">
 				<div id="gallery-button" class="nav-button">Gallery</div></a>
-			<a href="http://www.porchesterfestival.org/sponsors.html">
-				<div id="sponsors-button" class="nav-button">Sponsors</div></a>
+			<a href="http://www.porchesterfestival.org/associates.html">
+				<div id="associates-button" class="nav-button">Associates</div></a>
 			<a href="http://www.porchesterfestival.org/events.html">
 				<div id="events-button" class="nav-button">Events</div></a>
 		</div>
 		<div id="content-frame">
-			<div id="countdowntitle">Look out for a surprise event on Mapperley top:<div id="countdown"></div></div>
 			<div id="photo1" class="captionedphoto">
 				<div id="mapphoto"></div>
 				<div id="mapcaption">The Porchester ward</div>
@@ -52,7 +32,15 @@
 				Porchester Community Festival is a non profit organisation and any excess funds from organising the Festival are put back into the community. This year we're putting any excess funds raised into Haywood Road Community Centre.
 				</div>
 			</div>
-			
+			<div id="text-area2">
+				<div id="texttitle">Flash Mob</div>
+				<div id="textbody">As part of our publicity campaign this year, we had a surprise flash mob on mapperley top. You can see a short clip below:<br/>
+				<video controls>
+					<source src="assets/FlashMob.mp4" type="video/mp4">
+					Unfortunately, your browser does not support HTML5 video.
+				</video>
+				</div>
+			</div>
 			<div id="minigallery">Gallery</div>
 			<div id="gallerycontainer">
 				<div id="galleryphoto1" class="galleryphoto"><img src="assets/Picture1.png"></div>

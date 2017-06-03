@@ -75,7 +75,7 @@ body {
 	border-color: grey;
 }
 
-#sponsors-button {
+#associates-button {
 	border-right: solid 2px;
 	border-color: grey;
 }
@@ -127,6 +127,11 @@ body {
 #textbody {
 	font-size: 20px;
 	line-height: 28px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }

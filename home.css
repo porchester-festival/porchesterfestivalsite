@@ -24,17 +24,6 @@ body {
 	margin-left: calc(50% - 190px);
 }
 
-#title {
-	display: inline-block;
-	font-family: "PT Sans", sans-serif;
-	float: left;
-	padding-top: 75px;
-	padding-left: 20px;
-	color: white;
-	font-size: 50px;
-	font-weight: 900;
-}
-
 #navbar {
 	position: absolute;
 	width: 75%;
@@ -75,7 +64,7 @@ body {
 	border-color: grey;
 }
 
-#sponsors-button {
+#associates-button {
 	border-right: solid 2px;
 	border-color: grey;
 }
@@ -115,6 +104,7 @@ body {
 	font-size: 35px;
 	text-decoration: underline;
 	line-height: 15px;
+	padding-top: 50px;
 }
 
 #textbody {
@@ -125,11 +115,26 @@ body {
 
 #text-area1 {
 	float: left;
-	width: 62%;
+	width: 61%;
 	word-wrap: break-word;
 	overflow: hidden;
 	padding: 5px;
 	margin-left: 30px;
+}
+
+#text-area2 {
+	float: left;
+	width: 61%;
+	word-wrap: break-word;
+	overflow: hidden;
+	padding: 5px;
+	margin-left: 30px;
+}
+
+video {
+	float: left;
+	padding-top: 20px;
+	width: 75%;
 }
 
 #photo1 {
@@ -211,28 +216,7 @@ img {
 	float: left;
 	width: 95%;
 	padding-left: 35px;
+	padding-bottom: 20px;
 	font-size: 18px;
 	line-height: 10px;
-}
-
-#countdowntitle {
-	position: relative;
-	padding-top: 50px;
-	float: left;
-	width: 67%;
-	text-align: center;
-	font-family: "PT Sans", sans-serif;
-	font-size: 30px;
-	font-weight: 900;
-	margin: 0 auto;
-}
-
-#countdown {
-	width: 100%;
-	padding-bottom: 40px;
-	text-align: center;
-	font-family: "PT Sans", sans-serif;
-	font-size: 50px;
-	font-weight: 900;
-	margin: 0 auto;
 }
