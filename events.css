@@ -144,3 +144,8 @@ li {
 	padding: 5px;
 	margin-left: 30px;
 }
+
+img {
+	position: relative;
+	max-width: 75%;
+}
