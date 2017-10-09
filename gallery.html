@@ -5,9 +5,37 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 <body>
+	<script>
+		function overlay(enable) {
+			if(enable === true) {
+				window.scrollTo(0, 0);
+				document.getElementById("filter").style.display = "block";
+				document.getElementById("photo-frame").style.display = "block";
+				document.body.style.overflowY = "hidden";
+				document.getElementById("exit-button").style.display = "block";
+			} else {
+				document.getElementById("filter").style.display = "none";
+				document.getElementById("photo-frame").style.display = "none";
+				document.body.style.overflowY = "auto";
+				document.getElementById("exit-button").style.display = "none";
+			}
+		}
+		
+		function displayPhoto(srcUrl) {
+			document.getElementById("photo").src = srcUrl;
+		}
+		
+	</script>
+	<div id="filter"></div>
+	<div id="photo-frame">
+		<a href="javascript:void(0);"><div id="exit" onclick="overlay(false)"><img id="exit-button" src="assets/crossbutton.png"></div></a>
+		<div id="photodiv"><img id="photo"></div>
+	</div>
+	
 	<div id="container-header">
 		<img id="logo" src="assets/porchesterfestival_logo_new.png">
 	</div>
+	
 	<div id="container-main">
 		<div id="navbar">
 			<a href="http://www.porchesterfestival.org/">
@@ -21,57 +49,167 @@
 			<a href="http://www.porchesterfestival.org/events.html">
 				<div id="events-button" class="nav-button">Events</div></a>
 		</div>
+		
 		<div id="content-frame">
-			<div id="topictitle" class="texttitle">Pop-up Restaurant:</div>
-			<div class="gallerycontainer">
-				<img src="assets/PUR1.png">
-				<img src="assets/PUR2.png">
+			<div id="header" class="heading">Photo Gallery</div>
+			<div class="separator"></div>
+			<div id="page-selector">
+				<a href="javascript:void(0);"><div id="left-arrow" onclick="moveSelection(-1)"><img src="assets/left-arrow-key.png"></div></a>
+				<a href="javascript:void(0);"><div id="page1" class="page" onclick="selectPage(1)"></div></a>
+				<a href="javascript:void(0);"><div id="page2" class="page" onclick="selectPage(2)"></div></a>
+				<a href="javascript:void(0);"><div id="page3" class="page" onclick="selectPage(3)"></div></a>
+				<a href="javascript:void(0);"><div id="page4" class="page" onclick="selectPage(4)"></div></a>
+				<a href="javascript:void(0);"><div id="page5" class="page" onclick="selectPage(5)"></div></a>
+				<a href="javascript:void(0);"><div id="right-arrow" onclick="moveSelection(1)"><img src="assets/right-arrow-key.png"></div></a>
 			</div>
-			<div id="topictitle" class="texttitle">Porchester in Pots:</div>
-			<div class="gallerycontainer">
-				<img src="assets/PIP1.png">
-				<img src="assets/PIP2.png">
-				<img src="assets/PIP3.png">
-				<img src="assets/PIP4.png">
-				<img src="assets/PIP5.png">
-				<img src="assets/PIP6.png">
-				<img src="assets/PIP7.png">
-				<img src="assets/PIP8.png">
-				<img src="assets/PIP9.png">
-				<img src="assets/PIP10.png">
-				<img src="assets/PIP11.png">
-				<!-- Link all images to static-->
+			<script>
+				var currentSelection = 1;
+				document.getElementById("page1").style.backgroundColor = "black";
+				function moveSelection(direction) {
+					if(direction == 1 || direction == -1) {
+						if(document.getElementById("page" + (currentSelection + direction)) !== null) {
+							document.getElementById("page" + currentSelection).style.backgroundColor = "";
+							currentSelection = currentSelection + direction;
+							document.getElementById("page" + currentSelection).style.backgroundColor = "black";
+							showPage(currentSelection);
+						}
+					}
+				}
+				function selectPage(page) {
+					document.getElementById("page" + currentSelection).style.backgroundColor = "";
+					currentSelection = page;
+					document.getElementById("page" + currentSelection).style.backgroundColor ="black";
+					showPage(currentSelection);
+				}
+			</script>
+			<div class="separator"></div>
+			<script>
+				window.onload = function() {
+					document.getElementById("gallery-page1").style.display = "block";
+					document.getElementById("gallery-page2").style.display = "none";
+					document.getElementById("gallery-page3").style.display = "none";
+					document.getElementById("gallery-page4").style.display = "none";
+					document.getElementById("gallery-page5").style.display = "none";
+					document.addEventListener('click', function(event) {
+						if(event.target.className == "galleryphoto") {
+							overlay(true);
+							displayPhoto(event.target.getAttribute("src"));
+							
+						}
+				});
+				}
+				function showPage(page) {
+					document.getElementById("gallery-page1").style.display = "none";
+					document.getElementById("gallery-page2").style.display = "none";
+					document.getElementById("gallery-page3").style.display = "none";
+					document.getElementById("gallery-page4").style.display = "none";
+					document.getElementById("gallery-page5").style.display = "none";
+					document.getElementById("gallery-page" + page).style.display = "block";
+					
+				}
+			</script>
+			<div id=gallery-page1 class="gallerypage">
+				<img src="assets/gallery/CC1.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC2.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC3.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC4.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC5.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC6.JPG" class="galleryphoto">
+				<img src="assets/gallery/CC7.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB1.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB2.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB3.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB4.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB5.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB6.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB7.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB8.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB9.JPG" class="galleryphoto">
 			</div>
-			<div id="topictitle" class="texttitle">Jazz band and Stalls:</div>
-			<div class="gallerycontainer">
-				<img src="assets/JBS1.png">
-				<img src="assets/JBS2.png">
-				<img src="assets/JBS3.png">
-				<img src="assets/JBS4.png">
-				<img src="assets/JBS5.png">
-				<img src="assets/JBS6.png">
-				<img src="assets/JBS7.png">
-				<img src="assets/JBS8.png">
-				<img src="assets/JBS9.png">
-				<img src="assets/JBS10.png">
-				<img src="assets/JBS11.png">
-				<img src="assets/JBS12.png">
-				<img src="assets/JBS13.png">
-				<img src="assets/JBS14.png">
-				<img src="assets/JBS15.png">
-				<img src="assets/JBS16.png">
-				<img src="assets/JBS17.png">
-				<img src="assets/JBS18.png">
-				<img src="assets/JBS19.png">
-				<img src="assets/JBS20.png">
-				<img src="assets/JBS21.png">
-				<img src="assets/JBS22.png">
-				<img src="assets/JBS23.png">
-				<img src="assets/JBS24.png">
-				<img src="assets/JBS25.png">
-				<img src="assets/JBS26.png">
-				<!-- Link all images to static-->
+			<div id=gallery-page2 class="gallerypage">
+				<img src="assets/gallery/CCB10.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB11.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB12.JPG" class="galleryphoto">
+				<img src="assets/gallery/CCB13.JPG" class="galleryphoto">
+				<img src="assets/gallery/CFR2.JPG" class="galleryphoto">
+				<img src="assets/gallery/CFR3.JPG" class="galleryphoto">
+				<img src="assets/gallery/CFR4.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ1.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ2.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ3.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ4.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ5.JPG" class="galleryphoto">
+				<img src="assets/gallery/CZ6.JPG" class="galleryphoto">
+				<img src="assets/gallery/HA1.JPG" class="galleryphoto">
+				<img src="assets/gallery/HA2.JPG" class="galleryphoto">
+				<img src="assets/gallery/HA3.JPG" class="galleryphoto">
 			</div>
+			<div id=gallery-page3 class="gallerypage">
+				<img src="assets/gallery/FD1.JPG" class="galleryphoto">
+				<img src="assets/gallery/MN1.JPG" class="galleryphoto">
+				<img src="assets/gallery/MN2.JPG" class="galleryphoto">
+				<img src="assets/gallery/SZ1.JPG" class="galleryphoto">
+				<img src="assets/gallery/SZ2.JPG" class="galleryphoto">
+				<img src="assets/gallery/SZ3.JPG" class="galleryphoto">
+				<img src="assets/gallery/SZ4.JPG" class="galleryphoto">
+				<img src="assets/gallery/SZ5.JPG" class="galleryphoto">
+				<img src="assets/gallery/Y1.JPG" class="galleryphoto">
+				<img src="assets/gallery/PUR1.png" class="galleryphoto">
+				<img src="assets/gallery/PUR2.png" class="galleryphoto">
+				<img src="assets/gallery/PIP1.png" class="galleryphoto">
+				<img src="assets/gallery/PIP2.png" class="galleryphoto">
+				<img src="assets/gallery/PIP3.png" class="galleryphoto">
+				<img src="assets/gallery/PIP4.png" class="galleryphoto">
+				<img src="assets/gallery/PIP5.png" class="galleryphoto">
+			</div>
+			<div id=gallery-page4 class="gallerypage">
+				<img src="assets/gallery/PIP6.png" class="galleryphoto">
+				<img src="assets/gallery/PIP7.png" class="galleryphoto">
+				<img src="assets/gallery/PIP8.png" class="galleryphoto">
+				<img src="assets/gallery/PIP9.png" class="galleryphoto">
+				<img src="assets/gallery/PIP10.png" class="galleryphoto">
+				<img src="assets/gallery/PIP11.png" class="galleryphoto">
+				<img src="assets/gallery/JBS1.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS3.png" class="galleryphoto">
+				<img src="assets/gallery/JBS4.png" class="galleryphoto">
+				<img src="assets/gallery/JBS5.png" class="galleryphoto">
+				<img src="assets/gallery/JBS6.png" class="galleryphoto">
+				<img src="assets/gallery/JBS7.png" class="galleryphoto">
+				<img src="assets/gallery/JBS8.png" class="galleryphoto">
+				<img src="assets/gallery/JBS9.png" class="galleryphoto">
+				<img src="assets/gallery/JBS10.png" class="galleryphoto">
+			</div>
+			<div id=gallery-page5 class="gallerypage">
+				<img src="assets/gallery/JBS11.png" class="galleryphoto">
+				<img src="assets/gallery/JBS12.png" class="galleryphoto">
+				<img src="assets/gallery/JBS13.png" class="galleryphoto">
+				<img src="assets/gallery/JBS14.png" class="galleryphoto">
+				<img src="assets/gallery/JBS15.png" class="galleryphoto">
+				<img src="assets/gallery/JBS16.png" class="galleryphoto">
+				<img src="assets/gallery/JBS17.png" class="galleryphoto">
+				<img src="assets/gallery/JBS18.png" class="galleryphoto">
+				<img src="assets/gallery/JBS19.png" class="galleryphoto">
+				<img src="assets/gallery/JBS20.png" class="galleryphoto">
+				<img src="assets/gallery/JBS21.png" class="galleryphoto">
+				<img src="assets/gallery/JBS22.png" class="galleryphoto">
+				<img src="assets/gallery/JBS23.png" class="galleryphoto">
+				<img src="assets/gallery/JBS24.png" class="galleryphoto">
+				<img src="assets/gallery/JBS25.png" class="galleryphoto">
+				<img src="assets/gallery/JBS26.png" class="galleryphoto">
+			</div>
+			<!--<div id=gallery-page6 class="gallerypage">
+				<img src="assets/gallery/PS1.JPG" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+				<img src="assets/gallery/JBS2.png" class="galleryphoto">
+			</div>-->
 		</div>
 	</div>
 </body>
