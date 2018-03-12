@@ -154,6 +154,11 @@ li {
 	margin-left: 30px;
 }
 
+u {
+	font-weight: 600;
+	font-size: 25px;
+}
+
 img {
 	position: relative;
 	max-width: 75%;

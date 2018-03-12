@@ -177,7 +177,7 @@ body {
 }
 
 #page-selector {
-	display: table;
+	display: flex;
 	margin: 0 auto;
 	margin-bottom: 46px;
 	height: 50px;
